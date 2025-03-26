@@ -26,13 +26,13 @@ export default function ContactList() {
       uid: 4,
       name: 'Samar',
       status: 'Google',
-      imageUrl: 'www.google.com',
+      imageUrl: 'https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     },
     {
       uid: 5,
       name: 'Raj',
       status: 'Software developer',
-      imageUrl: 'www.google.com',
+      imageUrl: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=600" ,
     },
   ];
 
@@ -41,6 +41,7 @@ export default function ContactList() {
       <Text style={styles.headingText}>ContactList</Text>
 
       <ScrollView style={styles.container} scrollEnabled={true}>
+
         {contacts.map(({uid, name, status, imageUrl}) => (
           <View key={uid} style={styles.userCard}>
             <Image
@@ -49,10 +50,12 @@ export default function ContactList() {
               }}
               style={styles.userImage}
             />
+
             <View>
               <Text style={styles.userName}>{name}</Text>
               <Text style={styles.userStatus}>{status}</Text>
             </View>
+
           </View>
         ))}
       </ScrollView>
@@ -77,11 +80,13 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: 'green',
     borderRadius: 12,
+    padding:20,
   },
   userImage: {
     height: 70,
-    width: 100,
-    borderRadius: 60 / 2,
+    width: 70,
+    borderRadius: 50,
+    marginRight:20,
   },
 
   userName: {
